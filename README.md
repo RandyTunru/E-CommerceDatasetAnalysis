@@ -2,12 +2,12 @@
 
 ## Setup environment
 
-`pip install numpy pandas matplotlib seaborn streamlit babel`
+`pip install -r requirements.txt`
 
 ## Run streamlit app
 
 `streamlit run dashboard/dashboard.py`
 
-## Access through streamlit cloud at
+## Or access through streamlit cloud at
 
 `https://e-commercedatasetanalysis.streamlit.app/`
