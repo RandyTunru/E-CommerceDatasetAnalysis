@@ -105,6 +105,8 @@ ax[0].set_ylabel(None)
 ax[0].set_xlabel(None)
 ax[0].set_title("Best Performing Category", loc="center", fontsize=15)
 ax[0].legend().remove()
+ax[0].tick_params(axis='y', labelsize=15)
+ax[0].tick_params(axis='x', labelsize=15)
 
 sns.barplot(x="order_amount", y="product_category_name_english", data=category_performance_df.sort_values("order_amount").head(5), palette=colors, hue="product_category_name_english", ax=ax[1], linewidth=2)
 ax[1].set_ylabel(None)
@@ -114,6 +116,8 @@ ax[1].invert_xaxis()
 ax[1].yaxis.set_label_position("right")
 ax[1].yaxis.tick_right()
 ax[1].legend().remove()
+ax[1].tick_params(axis='y', labelsize=15)
+ax[1].tick_params(axis='x', labelsize=15)
 
 plt.suptitle("Best and Worst Performing Category by Number of Sales", fontsize=20)
 
@@ -128,6 +132,7 @@ ax[0].set_ylabel(None)
 ax[0].set_xlabel(None)
 ax[0].set_title("By Recency (days)", loc="center", fontsize=18)
 ax[0].tick_params(axis ='x', labelsize=15, rotation=45)
+ax[0].tick_params(axis ='y', labelsize=15)
 
 
 sns.barplot(y="frequency", x="customer_id", data=rfm_df.sort_values(by="frequency", ascending=False).head(5), palette=colors, ax=ax[1])
@@ -135,12 +140,14 @@ ax[1].set_ylabel(None)
 ax[1].set_xlabel(None)
 ax[1].set_title("By Frequency", loc="center", fontsize=18)
 ax[1].tick_params(axis='x', labelsize=15, rotation=45)
+ax[1].tick_params(axis='y', labelsize=15)
 
 sns.barplot(y="monetary", x="customer_id", data=rfm_df.sort_values(by="monetary", ascending=False).head(5), palette=colors, ax=ax[2])
 ax[2].set_ylabel(None)
 ax[2].set_xlabel(None)
 ax[2].set_title("By Monetary", loc="center", fontsize=18)
 ax[2].tick_params(axis='x', labelsize=15, rotation=45)
+ax[2].tick_params(axis='y', labelsize=15)
 
 for axes in ax:
   for label in axes.get_xticklabels():
