@@ -29,7 +29,7 @@ def category_performace(df):
 def rfm(df):
     rfm_df = df.groupby(by="customer_id", as_index=False).agg({
         "order_purchase_timestamp": "max",
-        "order_id": "nunique",
+        "order_id": "count",
         "price": "sum"
     })
     rfm_df.columns = ["customer_id", "max_order_timestamp", "frequency", "monetary"]
