@@ -43,7 +43,7 @@ def rfm(df):
 
     return rfm_df
 
-all_df = pd.read_csv('dashboard\main_df.csv')
+all_df = pd.read_csv('dashboard/main_df.csv')
 
 all_df["order_purchase_timestamp"] = pd.to_datetime(all_df["order_purchase_timestamp"]).dt.date
 
