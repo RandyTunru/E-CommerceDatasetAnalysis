@@ -7,3 +7,7 @@
 ## Run streamlit app
 
 `streamlit run dashboard/dashboard.py`
+
+## Access through streamlit cloud at
+
+`https://e-commercedatasetanalysis.streamlit.app/`
