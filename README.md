@@ -1,4 +1,4 @@
-# Dicoding E-Commerce Dataset Dashboard
+# E-Commerce Dataset Dashboard
 
 ## Setup environment
 
